@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function getMessage(name){
+        //     return 'Hello, ' + name + '...';
+        // }
+        // const message = getMessage('Ornella');
+        // document.write(message);
+
+        // function displayDone() {
+        //     console.log('Done!');
+        // }        
+        // setTimeout(displayDone, 3000);
+
+        // 익명 함수
+        // setTimeout(
+        //     function() {
+        //         console.log('Done!');
+        //     },
+        //     3000
+        // )
+
+        // 화살표 함수
+        // setTimeout(
+        //     () => {
+        //         console.log('Done!');
+        //     },
+        //     3000
+        // )
+
+        // setTimeout(
+        //     () => {
+        //         document.write('...Hello again!')
+        //     },
+        //     2000
+        // );
+
+        let myString1 = "Hello";
+        let myString2 = "World";
+        
+        console.log(`${myString1} ${myString2}!`); //Hello World!
+
+        setInterval(
+            () => {console.log('Done!');},
+            10000
+        );
+        
+        setTimeout(
+            () => {
+                console.log('Hello my name is dasol.');
+            },
+            3000
+        )
+
+        setTimeout(
+            function() {
+                console.log('I am a student at Jeju National University.');
+            },
+            6000
+        )
+
+        setTimeout(
+            function() {
+                console.log('nice to meet you!!');
+            },
+            9000
+        )
+    </script>
+</body>
+</html>
