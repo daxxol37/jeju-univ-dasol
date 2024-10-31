@@ -1,0 +1,173 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    text-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50;
+    }
+    to {
+        text-shadow: 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+    }
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Quote 하이라이트 깜빡임 효과 */
+.highlight {
+    background-color: #ffeb3b;
+    color: #000;
+    animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+    50% {
+        background-color: orange;
+    }
+}
+
+/* 입력 필드 */
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+    background-color: #222;
+    color: #ddd;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.8);
+    transform: scale(1.05);
+}
+
+/* 에러 흔들림 효과 */
+.error {
+    background-color: #ff4d4d;
+    border: 2px solid red;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* 버튼 효과 */
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: button-pulse 1.5s infinite alternate;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+@keyframes button-pulse {
+    0% {
+        box-shadow: 0 0 10px #4CAF50;
+    }
+    100% {
+        box-shadow: 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+    }
+}
+
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    animation: slide-down 0.4s ease-out;
+    box-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+/* 타이머 */
+#timer {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #fff;
+    transition: color 0.5s ease;
+    animation: timer-blink 1s infinite alternate;
+}
+
+@keyframes timer-blink {
+    0% {
+        color: #fff;
+    }
+    100% {
+        color: red;
+    }
+}
+
+#highscore {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #4CAF50;
+    font-style: italic;
+}

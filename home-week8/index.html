@@ -1,0 +1,29 @@
+<html>
+<head>
+ <title>Typing game</title>
+ <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+    <h1>Typing Game!</h1>
+    <p>Practice your typing skills with a quote from Sherlock Holmes. Complete the quote before time runs out!</p>
+    <p id="quote"></p>
+    <p id="message"></p>
+    <p id="highscore">High Score: <span id="best-score">0</span> seconds</p>
+    <div>
+      <input type="text" aria-label="current word" id="typed-value" disabled=""/>
+      <button type="button" id="start">Start</button>
+    </div>
+    <p id="timer">Time Left: <span id="time-left">20</span> seconds</p>
+    <div id="modal" class="modal">
+       <div class="modal-content">
+           <span class="close">&times;</span>
+           <p id="result-message"></p>
+       </div>
+    </div>
+    <script src="script.js"></script>
+   </body>
+</html>
+
+
+
+   
