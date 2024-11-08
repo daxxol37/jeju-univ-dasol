@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "My Carbon Trigger",
+  "version": "0.1.0",
+  "host_permissions": ["<all_urls>"],
+  "background": {
+  "service_worker": "/dist/background.js"
+  },
+  "action": {
+  "default_popup": "./dist/index.html"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/index.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  
+  
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/plants-people.png",
+        "reset.css",
+        "styles.css",
+        "src/index.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
