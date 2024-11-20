@@ -1,0 +1,84 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+    color: #333;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;    
+    width: 800px;
+    height: 600px;
+}
+
+/* 카드 컨테이너 */
+.cards-container {
+    position: relative; /* 카드들이 이 컨테이너를 기준으로 배치됩니다 */
+    height: 150px;
+}
+
+/* 개별 카드 스타일 */
+.card {
+    position: absolute; /* left, top 속성을 적용하기 위해 설정 */
+    width: 80px;
+    height: 112px;
+    background-color: #f1f1f1;
+    background-image: url('https://deckofcardsapi.com/static/img/back.png'); /* 카드 뒷면 */
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, z-index 0.2s;
+}
+img{
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 10; /* 호버된 카드가 위로 올라오도록 */
+}
+
+/* 선택된 카드 스타일 */
+.selected-card {
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* 운세 텍스트 스타일 */
+.fortune {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* 버튼 스타일 */
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
