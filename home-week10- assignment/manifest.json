@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Card Fortune Teller",
+  "version": "1.0",
+  "description": "Choose a card to reveal your fortune!",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [],
+  "host_permissions": [
+    "https://deckofcardsapi.com/*"
+  ]
+}
